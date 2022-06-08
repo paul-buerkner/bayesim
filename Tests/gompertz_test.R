@@ -54,7 +54,7 @@ hist(y, main = c(paste("Median:", median(y)), " for RNG of no-apex Gompertz(mu=2
 # Now all the R code is tested, now test the BRMS family
 n = 1000
 a = rnorm(n)
-data = list(a = a, y = bayesim::rgompertz(n, exp(0.5 * a + 1), 0.2))
+data = list(a = a, y = bayesim::rgompertz(n, exp(0.5 * a + 1), eta = 1))
 layout(1)
 hist(data$y)
 
